@@ -24,7 +24,7 @@ gulp.task('styles', function () {
 });
 
 gulp.task('jshint', function () {
-  return gulp.src('app/scripts/**/*.js')
+  return gulp.src('app/compos/**/*.js')
     .pipe(reload({stream: true, once: true}))
     .pipe($.jshint())
     .pipe($.jshint.reporter('jshint-stylish'))
@@ -90,17 +90,18 @@ gulp.task('serve', ['styles', 'fonts'], function () {
   // watch for changes
   gulp.watch([
     'app/*.html',
-    'app/scripts/**/*.js',
+    'app/compos/**/*.js',
     'app/images/**/*',
     '.tmp/fonts/**/*'
   ]).on('change', reload);
 
-  gulp.watch('app/styles/**/*.scss', ['styles']);
+  gulp.watch('app/**/*.scss', ['styles']);
   gulp.watch('app/fonts/**/*', ['fonts']);
-  gulp.watch('bower.json', ['wiredep', 'fonts']);
+  // gulp.watch('bower.json', ['wiredep', 'fonts']);
 });
 
 // inject bower components
+/**
 gulp.task('wiredep', function () {
   var wiredep = require('wiredep').stream;
 
@@ -116,6 +117,7 @@ gulp.task('wiredep', function () {
     }))
     .pipe(gulp.dest('app'));
 });
+*/
 
 gulp.task('build', ['jshint', 'html', 'images', 'fonts', 'extras'], function () {
   return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
