@@ -6,7 +6,8 @@ define([
 var core = "jodobox.core"
 
 angular
-.module( core, [ "ngRoute", "ngCookies" ] ) // `angular-route` and `angular-cookies` was already loaded in ./compos/boot.js
+// `angular-route` and `angular-cookies` was already loaded in ./compos/boot.js
+.module( core, [ "ngRoute", "ngCookies" ] )
 .config( cong )
 
 return core

@@ -10,7 +10,7 @@ define([
 var ui = "jodobox.ui"
 
 angular
-.module( ui, [] )
+.module( ui, [ /*"ui.bootstrap", "ui.select"*/ ] )
 
 return ui
 

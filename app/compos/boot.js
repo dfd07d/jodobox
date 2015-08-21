@@ -1,17 +1,20 @@
 require([
-    "angular",
-    "./app"
-], function( angular, app ) {
+    "angular"
+], function( angular ) {
 
     require([
         "angular/route",
         "angular/cookies"
     ], function() {
-        var doc = angular.element( document )
 
-        doc.ready(function () {
-            angular.bootstrap( document, [ app ] )
+        require([ "./app" ], function( app ) {
+            var doc = angular.element( document )
+
+            doc.ready(function () {
+                angular.bootstrap( document, [ app ] )
+            })
         })
+
     })
 
 })

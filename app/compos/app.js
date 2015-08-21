@@ -2,6 +2,7 @@ define([
     "angular",
     "./core/core",
     "./ui/ui",
+    "./regis/regis",
     "./user/user",
     "./box/box",
     "./image/image",
@@ -12,7 +13,7 @@ define([
 var app = "jodobox.app"
 
 angular
-.module( app, [
+.module(app, [
     core,
     ui,
     box,

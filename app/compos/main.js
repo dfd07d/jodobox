@@ -11,7 +11,7 @@ require.config({
     },
 
     shim: {
-        "angular": {
+        angular: {
             exports: "angular"
         }
     },
