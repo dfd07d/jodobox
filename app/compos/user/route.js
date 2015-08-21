@@ -1,6 +1,11 @@
 define(function() {
 
 var routes = {
+    "/profile": {
+        templateUrl: "compos/user/tpl/show.html",
+        controller: "userCtrl",
+        bindToController: true
+    }
 }
 
 return [

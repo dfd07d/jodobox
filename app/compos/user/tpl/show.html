@@ -1,0 +1,97 @@
+<user-profile
+    ng-init="tab=1"
+    template="user.profile.html">
+</user-profile>
+
+<script type="text/ng-template" id="user.profile.html">
+<div class="container">
+    <div class="page-header">
+        <h1>profile</h1>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-3">
+            <ul class="nav nav-pills nav-stacked">
+                <li ng-class="{'active': tab === 1}"
+                    ng-click="tab=1">
+                    <a href>basic</a>
+                </li>
+                <li ng-class="{'active': tab === 2}"
+                    ng-click="tab=2">
+                    <a href>personal info</a>
+                </li>
+                <li ng-class="{'active': tab === 3}"
+                    ng-click="tab=3">
+                    <a href>secret</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="col-xs-12 col-sm-8">
+            <div class="tab-content">
+                <div class="tab-pane" ng-class="{'active': tab === 1}">
+                    <div class="alert alert-warning">
+                        <p>foobar, some of your basic info on jodobox. have fun!</p>
+                    </div>
+                    <table class="table">
+                        <tr>
+                            <th>balance</th>
+                            <td><span>$</span><strong>99.00<strong><button class="btn btn-success" type="button">charge</button></td>
+                        </tr>
+                        <tr>
+                            <th>projects</th>
+                            <td><strong>6</strong>&#47;8<sup class="text-warning">attention</sup></td>
+                        </tr>
+                        <tr>
+                            <th>invatation</th>
+                            <td><strong>8</strong>&#47;30</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="tab-pane" ng-class="{'active': tab === 2}">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-xs-3 control-label" for="id__email">email</label>
+                            <div class="col-xs-9">
+                                <p class="form-control-static" id="id__email">foobar@gmail.com<span class="text-success"><i class="glyphicon glyphicon-ok"></i></span></p>
+                                <p class="help-block">email cannot be changed.</p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-xs-3 control-label" for="id__username">username</label>
+                            <div class="col-xs-9">
+                                <input class="form-control" type="text" id="id__email" value="foobar">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="tab-pane" ng-class="{'active': tab === 3}">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-xs-3 control-label" for="id__password">new password</label>
+                            <div class="col-xs-9">
+                                <input class="form-control" type="password" id="id__password">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-xs-3 control-label" for="id__old-password">old password</label>
+                            <div class="col-xs-9">
+                                <input class="form-control" type="password" id="id__old-password">
+                                <p class="help-block">we need your old password.</p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-xs-offset-3 col-xs-9">
+                                <button class="btn btn-primary btn-lg" type="button">save change</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+</script>

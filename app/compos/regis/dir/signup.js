@@ -12,7 +12,6 @@ return [
         }
 
         return {
-            replace: true,
             link: link
         }
     }
