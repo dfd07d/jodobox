@@ -8,3 +8,11 @@ body {
     color: $gray-base;
     background-color: $body-bg;
 }
+
+* {
+    &:hover,
+    &:focus,
+    &:active {
+        outline: none;
+    }
+}

@@ -4,7 +4,7 @@
     <div class="tab-content">
         <div class="tab-pane" ng-class="{'active': tab1===1}">
             <box-activities
-                template="box.show.activities.html">
+                template="box.activ.html">
             </box-activities>
         </div>
 
@@ -12,7 +12,7 @@
             <div class="panel panel-default">
                 <div class="panel-body">
                     <box-setting
-                        template="box.show.setting.html">
+                        template="box.set.html">
                     </box-setting>
                 </div>
             </div>
@@ -45,15 +45,15 @@
 <div class="container" ng-transclude></div>
 </script>
 
-<script type="text/ng-template" id="box.show.activities.html">
+<script type="text/ng-template" id="box.activ.html">
 <tabset>
     <tab heading="build history">
         <div class="panel panel-default">
             <div class="panel-body">
                 <box-build-list
-                    template="box.show.activities.build.list.html">
+                    template="box.blist.html">
                     <box-build-item
-                        template="box.show.activities.build.item.html"
+                        template="box.bitem.html"
                         ng-repeat="item in [{},{},{},{},{}]">
                     </box-build-item>
                 </box-build-list>
@@ -64,7 +64,7 @@
         <div class="panel panel-default">
             <div class="panel-body">
                 <box-ci-list
-                    template="box.show.activities.ci.list.html">
+                    template="box.clist.html">
                 </box-ci-list>
             </div>
         </div>
@@ -72,7 +72,7 @@
 </tabset>
 </script>
 
-<script type="text/ng-template" id="box.show.activities.build.list.html">
+<script type="text/ng-template" id="box.blist.html">
 <table class="table">
     <thead>
         <tr>
@@ -88,7 +88,7 @@
 </table>
 </script>
 
-<script type="text/ng-template" id="box.show.activities.build.item.html">
+<script type="text/ng-template" id="box.bitem.html">
 <tr>
     <td>
         <a href>
@@ -121,11 +121,15 @@
 </tr>
 </script>
 
-<script type="text/ng-template" id="box.show.activities.ci.list.html">
+<script type="text/ng-template" id="box.clist.html">
 <p>ci list goes here...</p>
 </script>
 
-<script type="text/ng-template" id="box.show.setting.html">
+<script type="text/ng-template" id="box.citem.html">
+<p>ci item goes here...</p>
+</script>
+
+<script type="text/ng-template" id="box.set.html">
 <div class="row">
     <div class="col-xs-3">
         <ul class="nav nav-pills nav-stacked">
@@ -228,7 +232,7 @@
                     <div class="panel-body">
                         <p><strong>note:</strong>once box was deleted, you can not refound it further. this action will ask you to confirm before you delete it.</p>
                         <button
-                            class="btn btn-danger btn-block"
+                            class="btn btn-danger btn-lg btn-block"
                             type="button">delete nodejs sample</button>
                     </div>
                 </div>
