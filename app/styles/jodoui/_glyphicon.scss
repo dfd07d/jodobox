@@ -1,7 +1,5 @@
 @charset "UTF-8";
 
-@import "./../../jodo";
-
 .glyphicon {
     @include position(relative, 3px null null);
     margin-right: 3px;

@@ -2,14 +2,14 @@ define([
     "angular",
     "./core/core",
     "./ui/ui",
-    "./sbar/sbar",
+    "./nbar/nbar",
     "./regis/regis",
     "./user/user",
     "./box/box",
     "./image/image",
     "./apl/apl",
     "./addon/addon"
-], function( angular, core, ui, sbar, box, image, apl, addon ) {
+], function( angular, core, ui, nbar, box, image, apl, addon ) {
 
 var app = "jodobox.app"
 
@@ -17,7 +17,7 @@ angular
 .module(app, [
     core,
     ui,
-    sbar,
+    nbar,
     box,
     image,
     apl,

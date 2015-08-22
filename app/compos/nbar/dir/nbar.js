@@ -5,7 +5,7 @@ return [
     "$compile",
     function( $templateCache, $compile ) {
         var link = function link( scope, el, attrs ) {
-            var tpl = $templateCache.get( "sidebar.html" ),
+            var tpl = $templateCache.get( "navbar.html" ),
                 rsltEl = $compile( tpl )( scope )
 
             el.replaceWith( rsltEl )

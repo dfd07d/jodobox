@@ -5,11 +5,16 @@
 // ```$ bower info twbs-bootstrap-sass```
 @import "./../../bower_components/twbs-bootstrap-sass/assets/stylesheets/bootstrap";
 
+// jodoui core
+@import "./jodoui/mixin";
+@import "./jodoui/var";
+
 // jodo ui components
-@import "./jodoui/compos/type";
-@import "./jodoui/compos/navbar";
-@import "./jodoui/compos/header";
-@import "./jodoui/compos/tooltip";
-@import "./jodoui/compos/glyphicon";
-@import "./jodoui/compos/table";
-@import "./jodoui/compos/form";
+@import "./jodoui/type";
+@import "./jodoui/table";
+@import "./jodoui/form";
+
+@import "./jodoui/navbar";
+@import "./jodoui/header";
+@import "./jodoui/tooltip";
+@import "./jodoui/glyphicon";
