@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+@import "./../../jodo";
+
+$page-header-bg: #fff;
+
+.page-header {
+    &.attached-navbar {
+        margin-top: -20px;
+        background-color: $page-header-bg;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .nav-tabs {
+        border-bottom: 2px solid transparent;
+        @include position(relative, null null -10px);
+        > li,
+        > .active {
+            margin-bottom: -2px;
+            > a {
+                border-width: 0 0 2px;
+                &:hover,
+                &:focus,
+                &:active {
+                    border-width: 0 0 2px;
+                }
+            }
+        }
+        > .active > a,
+        > .active > a:hover,
+        > .active > a:focus,
+        > .active > a:active {
+            color: $gray-base;
+            font-weight: 600;
+            border-bottom-color: $brand-primary;
+        }
+    }
+}

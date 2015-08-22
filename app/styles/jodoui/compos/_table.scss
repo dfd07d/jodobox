@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+@import "./../../jodo";
+
+table,
+.table {
+    > thead,
+    > tbody,
+    > tfoot {
+        > tr {
+            > td,
+            > th {
+                vertical-align: middle;
+            }
+        }
+    }
+    &.table-text-top {
+        > thead,
+        > tbody,
+        > tfoot {
+            > tr {
+                > td,
+                > th {
+                    vertical-align: top;
+                }
+            }
+        }
+    }
+}

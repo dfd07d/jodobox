@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+@import "./../../jodo";
+
+$navbar-brand-font-family: montserrat, sans-serif;
+
+.navbar-inverse {
+    background-color: $navbar-inverse-bg;
+    border-radius: 0;
+    .navbar-brand {
+        color: $navbar-inverse-brand-hover-color;
+        font-size: 20px;
+        font-family: $navbar-brand-font-family;
+        letter-spacing: -0.1em;
+    }
+    .navbar-nav {
+        font-weight: 600;
+    }
+}

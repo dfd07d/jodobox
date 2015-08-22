@@ -1,0 +1,172 @@
+<sidebar></sidebar>
+
+<box-show
+    template="box.show.html"
+    ng-init="tab1=1;tab2=1">
+</box-show>
+
+<script type="text/ng-template" id="box.show.html">
+<div class="page-header attached-navbar">
+    <div class="container-fluid">
+        <div class="pull-right" style="margin-top: 20px;">
+            <button class="btn btn-primary btn-lg" type="button"><i class="glyphicon glyphicon-play"></i>manual build</button>
+        </div>
+        <h1>nodejs-sample</h1>
+        <div class="text-muted">nodejs-sample was an sample of nodejs on docker ...</div>
+        <ul class="nav nav-tabs">
+            <li ng-class="{'active': tab1===1}"><a href ng-click="tab1=1">activities</a></li>
+            <li ng-class="{'active': tab1===2}"><a href ng-click="tab1=2">setting</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="container hidden">
+    <ul class="breadcrumb">
+        <li><a href="#/dashboard">dashboard</a></li>
+        <li><a href="#/boxes">boxes</a></li>
+        <li><span>nodejs-sample</span></li>
+    </ul>
+</div>
+
+<div class="container">
+    <div class="tab-content">
+        <div class="tab-pane" ng-class="{'active': tab1===1}">
+            <tabset>
+                <tab heading="build history">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>build<small class="text-muted">(tag)</small></th>
+                                        <th>status</th>
+                                        <th>commit</th>
+                                        <th>activity</th>
+                                        <th>duration</th>
+                                        <th>action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr ng-repeat="item in [{},{},{},{}]">
+                                        <td><a href><i class="glyphicon glyphicon-tag"></i><strong>feature-build-7519637</strong></a></td>
+                                        <td>
+                                            <span class="text-success"><i class="glyphicon glyphicon-record"></i>success</span>
+                                            <a href tooltip="view logs"><i class="glyphicon glyphicon-option-horizontal"></i></a>
+                                        </td>
+                                        <td><code>7519637</code></td>
+                                        <td><span>4 hours ago</span></td>
+                                        <td><span>2 minutes 37 seconds</span></td>
+                                        <td>
+                                            <div dropdown>
+                                                <a href dropdown-toggle><i class="glyphicon glyphicon-option-horizontal"></i></a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a href>rebuild</a></li>
+                                                    <li><a href>cancel</a></li>
+                                                    <li class="divider"></li>
+                                                    <li class="disabled"><a href>delete<small>(coming soon)</small></a></li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </tab>
+
+                <tab heading="ci history">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <p>ci history goes here...</p>
+                        </div>
+                    </div>
+                </tab>
+
+            </tabset>
+        </div>
+
+        <div class="tab-pane" ng-class="{'active': tab1===2}">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="row">
+
+                        <div class="col-xs-3">
+                            <ul class="nav nav-pills nav-stacked">
+                                <li ng-class="{'active': tab2===1}"><a href ng-click="tab2=1">box information</a></li>
+                                <li ng-class="{'active': tab2===2}"><a href ng-click="tab2=2">delete</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="col-xs-9">
+                            <div class="tab-content">
+                                <div class="tab-pane" ng-class="{'active': tab2===1}">
+                                    <form class="form-horizontal">
+                                        <legend>change box information</legend>
+                                        <div class="form-group">
+                                            <label class="col-xs-3 control-label" for="id__name">box name</label>
+                                            <div class="col-xs-9">
+                                                <input class="form-control hidden" id="id__name" type="text" value="nodejs-sample">
+                                                <p class="form-control-static">nodejs-sample<a class="text-muted" href><i class="glyphicon glyphicon-edit"></i></a></p>
+                                                <p class="help-block">change box name here.</p>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-xs-3 control-label" for="id__ci">enable ci</label>
+                                            <div class="col-xs-9">
+                                                <div class="checkbox">
+                                                    <label><input id="id__ci" type="checkbox">enable ci<small class="text-muted" style="margin-left: 5px;">(optional)</small></label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-xs-3 control-label" for="id__cache">enable build cache</label>
+                                            <div class="col-xs-9">
+                                                <div class="checkbox">
+                                                    <label><input id="id__cache" type="checkbox" checked>enable cache<small class="text-muted" style="margin-left: 5px;">(recommendation)</small></label>
+                                                </div>
+                                                <p class="help-block">increase build speed much fast</p>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="form-group">
+                                            <label class="col-xs-3 control-label" for="id__build-dir">build directory</label>
+                                            <div class="col-xs-9">
+                                                <input class="form-control" id="id__build-dir" type="text" value="/">
+                                                <p class="help-block">sometimes the build directory maybe nested.</p>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-xs-3 control-label" for="id__dockerfile">dockerfile path</label>
+                                            <div class="col-xs-9">
+                                                <input class="form-control" id="id__dockerfile" type="text" value="/Dockerfile">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-xs-offset-3 col-xs-9">
+                                                <button class="btn btn-primary btn-lg" type="button" disabled>save changes</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+
+                                <div class="tab-pane" ng-class="{'active': tab2===2}">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <h4 class="panel-title">delete</h4>
+                                        </div>
+                                        <div class="panel-body">
+                                            <p><strong>note:</strong>once box was deleted, you can not refound it further. this action will ask you to confirm before you delete it.</p>
+                                            <button class="btn btn-danger btn-block" type="button">delete nodejs sample</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    <div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</script>

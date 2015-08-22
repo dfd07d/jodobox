@@ -5,8 +5,12 @@ define([
     "./boot",
     "./ctrl/index",
     "./ctrl/show",
-    "./ctrl/new"
-], function( angular, http, route, boot, boxIndexCtrl, boxCtrl, newBoxCtrl ) {
+    "./ctrl/new",
+    "./dir/list",
+    "./dir/item",
+    "./dir/show"
+], function( angular, http, route, boot, boxIndexCtrl, boxCtrl, newBoxCtrl,
+        boxList, boxItem, boxShow ) {
 
 var box = "jodobox.box"
 
@@ -17,6 +21,9 @@ angular
 .controller( "boxIndexCtrl", boxIndexCtrl )
 .controller( "boxCtrl", boxCtrl )
 .controller( "newBoxCtrl", newBoxCtrl )
+.directive( "boxList", boxList )
+.directive( "boxItem", boxItem )
+.directive( "boxShow", boxShow )
 
 return box
 

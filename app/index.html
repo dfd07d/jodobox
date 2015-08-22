@@ -18,15 +18,69 @@
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <div class="navbar">
+    <div class="navbar navbar-inverse">
         <div class="container-fluid">
             <div class="navbar-header">
                 <a class="navbar-brand" href="#/">jodobox</a>
             </div>
+            <ul class="nav navbar-nav">
+                <li><a class="text-capitalize" href="#/dashboard"><span>dashboard</span></a></li>
+                <li class="active" dropdown>
+                    <a class="text-capitalize" href dropdown-toggle><span tooltip="build box from here" tooltip-placement="right">build</span><i class="caret"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#/boxes">all boxes built</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#/boxes/new"><i class="glyphicon glyphicon-plus-sign"></i><strong>build a box</strong></a></li>
+                    </ul>
+                </li>
+                <li dropdown>
+                    <a class="text-capitalize" href dropdown-toggle><span tooltip="image placed here" tooltip-placement="right">ship</span><i class="caret"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href>all ship-ready images</a></li>
+                        <li class="divider"></li>
+                        <li><a href><i class="glyphicon glyphicon-screenshot"></i><strong>ship an image</strong></a></li>
+                    </ul>
+                </li>
+                <li><a class="text-capitalize" href><span tooltip="applications runs here" tooltip-placement="right">run</span></a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href>help</a></li>
+                <li dropdown>
+                    <a href dropdown-toggle>foo<i class="caret"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#/profile">profile</a></li>
+                        <li class="divider"></li>
+                        <li><a href><i class="glyphicon glyphicon-off"></i>log out</a></li>
+                    </ul>
+                </li>
+            </ul>
         </div>
     </div>
 
     <div ng-view></div>
+
+    <div class="container text-center">
+        <p class="text-muted">build, ship and run any app, anyway.</p>
+        <div>
+            <a href>jodoshop</a>
+            <span class="divider"></span>
+            <a href>blog</a>
+            <span class="divider"></span>
+            <a href>company<i class="caret"></i></a>
+            <span class="divider"></span>
+            <a href>feedback</a>
+        </div>
+    </div>
+
+    <script type="text/ng-template" id="sidebar.html">
+        <div class="pull-left hidden">
+            <ul class="nav nav-pills nav-stacked">
+                <li><a href="#/boxes">box</a></li>
+                <li><a href="#/apps">app</a></li>
+                <li><a href="#/images">image</a></li>
+            </ul>
+        </div>
+    </script>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
