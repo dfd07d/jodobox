@@ -1,12 +1,15 @@
-<box-list
-    template="box.list.html">
-    <box-item
-        template="box.item.html"
-        ng-repeat="box in [{},{},{},{}]">
-    </box-item>
-</box-list>
+<box-index
+    template="box.index.html">
+    <box-list
+        template="box.list.html">
+        <box-item
+            template="box.item.html"
+            ng-repeat="box in [{},{},{},{}]">
+        </box-item>
+    </box-list>
+</box-index>
 
-<script type="text/ng-template" id="box.list.html">
+<script type="text/ng-template" id="box.index.html">
 <div class="page-header attached-navbar">
     <div class="container-fluid">
         <div class="pull-right" style="margin-top: 20px;"><a href="#/boxes/new" class="btn btn-primary btn-lg" type="button"><i class="glyphicon glyphicon-plus-sign"></i>build a box</a></div>
@@ -14,32 +17,28 @@
         <p class="text-muted">there are 7&#47;8 boxes.<sup class="text-warning">attention</sup></p>
     </div>
 </div>
-
 <div class="container">
-    <ul class="breadcrumb">
-        <li><a href="#/">dashboard</a></li>
-        <li class="active"><span>boxes</span></li>
-    </ul>
-
     <div class="panel panel-default">
-        <div class="panel-body">
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>box</th>
-                        <th>status</th>
-                        <th>source</th>
-                        <th>language</th>
-                        <th>activity</th>
-                        <th>image</th>
-                        <th>action</th>
-                    </tr>
-                </thead>
-                <tbody ng-transclude></tbody>
-            </table>
-        </div>
+        <div class="panel-body" ng-transclude></div>
     </div>
 </div>
+</script>
+
+<script type="text/ng-template" id="box.list.html">
+<table class="table">
+    <thead>
+        <tr>
+            <th>box</th>
+            <th>status</th>
+            <th>source</th>
+            <th>language</th>
+            <th>activity</th>
+            <th>image</th>
+            <th>action</th>
+        </tr>
+    </thead>
+    <tbody ng-transclude></tbody>
+</table>
 </script>
 
 <script type="text/ng-template" id="box.item.html">
