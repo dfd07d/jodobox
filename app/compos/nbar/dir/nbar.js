@@ -5,15 +5,12 @@ return [
     "$compile",
     function( $templateCache, $compile ) {
         var link = function link( scope, el, attrs ) {
-            var tpl = $templateCache.get( "navbar.html" ),
-                rsltEl = $compile( tpl )( scope )
-
-            el.replaceWith( rsltEl )
         }
 
         return {
             scope: {
             },
+            templateUrl: "compos/nbar/tpl/nbar.html",
             replace: true,
             link: link
         }
