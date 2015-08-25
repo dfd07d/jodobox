@@ -1,41 +1,48 @@
 <!doctype html>
 <html class="no-js" lang="">
-  <head>
-    <meta charset="utf-8">
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>jodobox</title>
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+<head>
+<meta charset="utf-8">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>jodobox</title>
+<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-    <!-- build:css styles/app.css -->
-    <link rel="stylesheet" href="styles/main.css">
-    <!-- endbuild -->
+<!-- build:css styles/app.css -->
+<link rel="stylesheet" href="styles/main.css">
+<!-- endbuild -->
+<style type="text/css">
+.site-links { margin-bottom: 5px; }
+.site-links .divider {
+    display: inline-block;
+    margin-left: 5px;
+    margin-right: 5px; }
+</style>
 
-    <script data-main="./compos/main" src="/bower_components/requirejs/require.js"></script>
-  </head>
-  <body>
-    <!--[if lt IE 10]>
-      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
+<script data-main="./compos/main" src="/bower_components/requirejs/require.js"></script>
+</head>
+<body>
+<!--[if lt IE 10]>
+  <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
 
-    <navbar></navbar>
-    <div ng-view></div>
+<navbar></navbar>
+<div ng-view></div>
 
-    <div class="container text-center">
-        <p class="text-muted">build, ship and run any app, anyway.</p>
-        <div>
-            <a href>jodoshop</a>
-            <span class="divider"></span>
-            <a href>blog</a>
-            <span class="divider"></span>
-            <a href>company<i class="caret"></i></a>
-            <span class="divider"></span>
-            <a href>feedback</a>
-        </div>
+<div class="container text-center">
+    <p class="text-muted">build, ship and run any app, anyway.</p>
+    <div class="site-links">
+        <a href>jodoshop</a>
+        <span class="divider"></span>
+        <a href>blog</a>
+        <span class="divider"></span>
+        <a href>company<i class="caret"></i></a>
+        <span class="divider"></span>
+        <a href>feedback</a>
     </div>
+</div>
 
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-    <script>;(function(){console.log("ga");}());</script>
+<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+<script>;(function(){console.log("ga");}());</script>
 
 </body>
 </html>

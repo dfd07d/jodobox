@@ -2,3 +2,15 @@
 
 @import "./../../styles/jodoui/export";
 
+input[type=text],
+input[type=number] {
+    &.form-control[disabled],
+    &.form-control[readonly] {
+        color: $gray;
+        border-bottom-color: lighten($input-border, 10%);
+        background-color: transparent;
+        // cursor: $cursor-disabled; // variable not working
+        cursor: not-allowed;
+    }
+}
+

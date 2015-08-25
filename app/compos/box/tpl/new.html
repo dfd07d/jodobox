@@ -1,1 +1,91 @@
-<h1>new box</h1>
+<div class="page-header attached-navbar">
+    <div class="container-fluid">
+        <h1>build a box</h1>
+        <div class="text-muted">all fields are required.</div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <form class="form-horizontal">
+                <legend>about the box</legend>
+                <div class="form-group">
+                    <label class="col-xs-12 col-sm-3 control-label" for="id__source">source code</label>
+                    <div class="col-xs-12 col-sm-9">
+                        <div class="panel panel-default" style="margin-bottom: 0;">
+                            <div class="panel-body">
+                                <p>chose a source provider and code repository</p>
+                                <div style="margin-bottom: 10px;">
+                                    <select
+                                        class="form-control form-control-normal active"
+                                        style="display: inline-block; width: auto;">
+                                        <option>chose provider</option>
+                                        <option value="1">github</option>
+                                        <option value="2">bitbucket</option>
+                                        <option value="3">coding</option>
+                                    </select>
+                                    <span class="text-muted">:</span>
+                                    <select
+                                        class="form-control form-control-normal"
+                                        style="display: inline-block; width: auto;" disabled>
+                                        <option>username<option>
+                                    </select>
+                                    <span class="text-muted">&#47;</span>
+                                    <select
+                                        class="form-control form-control-normal"
+                                        style="display: inline-block; width: auto;" disabled>
+                                        <option>repo name<option>
+                                    </select>
+                                </div>
+                                <p class="help-block">first build will be triggered on the latest commit in branch master.</p>
+                                <div class="panel panel-default" style="margin-bottom: 0;">
+                                    <div class="panel-body">
+                                        <table class="table" style="margin-bottom: 0;">
+                                            <tr>
+                                                <td style="border-top: 0;">
+                                                    <label class="control-label" for="id__bdir">build dir<small class="text-muted">(e.g <code tooltip="/foo will be the build dir."><u>&#47;foo</u></code>)</small></label>
+                                                    <input class="form-control" id="id__bdir" type="text" value="/" disabled>
+                                                </td>
+                                                <td style="border-top: 0;">
+                                                    <label class="control-label" for="id__dpath">dockerfile path<small class="text-muted">(e.g <code tooltip="/foo/bar was the dir where dockerfile placed."><u>&#47;foo&#47;bar&#47;Dockerfile</u></code>)</small></label>
+                                                    <input class="form-control" id="id__dpath" type="text" value="/Dockerfile" disabled>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <p class="help-block"><i class="glyphicon glyphicon-info-sign"></i>root dir of repo:<strong><code>&#47;</code></strong>
+                                            <a class="pull-right" href>need help?</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group form-group-lg">
+                    <label class="col-xs-12 col-sm-3 control-label" for="id__name">image name</label>
+                    <div class="col-xs-12 col-sm-9">
+                        <input class="form-control input-lg" id="id__name" type="text" value="example" disabled>
+                        <p class="help-block">image will be:<span class="label label-default">yuwen/<strong>example</strong>:<span>latest</span></span></p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-xs-12 col-sm-3 control-label" for="id__ci">enable ci</label>
+                    <div class="col-xs-12 col-sm-9">
+                        <div class="checkbox">
+                            <label><input id="id__ci" type="checkbox" checked>enable<small class="text-muted" style="margin-left: 5px;">(recommendation)</small></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-xs-12 col-sm-offset-3 col-sm-9">
+                        <button class="btn btn-primary btn-lg" type="submit" disabled>create and build&raquo;</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script type="text/ng-template" id="box.new.html">
+</script>
