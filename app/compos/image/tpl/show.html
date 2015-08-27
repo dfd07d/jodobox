@@ -1,0 +1,70 @@
+<div class="page-header attached-navbar">
+    <div class="container-fluid">
+        <div class="pull-right" style="margin-top: 20px;"><button class="btn btn-primary btn-lg" type="button">deploy</button></div>
+        <h1><span>jodobox</span>&#47;<strong>postgresql</strong></h1>
+        <ul class="nav nav-tabs" ng-init="tab=1">
+            <li ng-class="{'active': tab===1}"><a href ng-click="tab=1">overview</a></li>
+            <li ng-class="{'active': tab===2}"><a href ng-click="tab=2">versions</a></li>
+            <li ng-class="{'active': tab===3}"><a href ng-click="tab=3">setting</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="container">
+    <div class="tab-content">
+
+        <div class="tab-pane" ng-class="{'active': tab===1}">
+            <ul class="nav nav-tabs">
+                <li class="active"><a href>readme</a></li>
+                <li><a href>api &amp; environment</a></li>
+                <li><a href>dockerfile</a></li>
+            </ul>
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="tab-content">
+                        <div class="tab-pane active">
+                            <p>configuration goes here...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-pane" ng-class="{'active': tab===2}">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>tag</th>
+                                <th>update</th>
+                                <th>action</th>
+                            </tr>
+                        </thead>
+                        <tr ng-repeat="item in [{},{},{}]">
+                            <td><i class="glyphicon glyphicon-tag"></i><strong>5.4.32-postgresql</strong></td>
+                            <td>2 days ago</td>
+                            <td><button class="btn btn-primary" type="button">deploy</button></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-pane" ng-class="{'active': tab===3}">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">delete</h4>
+                            </div>
+                            <div class="panel-body">
+                                <button class="btn btn-danger btn-lg btn-block" type="button">delete</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+
+    </div>
+</div>

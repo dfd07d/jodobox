@@ -2,3 +2,25 @@
 
 @import "./../../styles/jodoui/export";
 
+.images {
+    &.i-index {
+        .panel {
+            .row { @include margin(null -10px); }
+
+            [class^=col-] {
+                @include padding(null 10px);
+            }
+
+            .thumbnail {
+                padding: 0;
+                border-color: transparent;
+                img { @include border-top-radius($border-radius-base); }
+                .caption {
+                    font-size: $font-size-large - 2;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}
+

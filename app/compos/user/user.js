@@ -1,21 +1,21 @@
 define([
     "angular",
     "./../http/http",
-    "./route",
+    "./router",
     "./ctrl/show",
     "./dir/profile",
     "./dir/sbar",
     "./dir/info",
     "./dir/bio",
     "./dir/pwd"
-], function( angular, http, route, userCtrl, profile,
+], function( angular, http, router, userCtrl, profile,
         sbar, info, bio, pwd ) {
 
 var user = "jodobox.user"
 
 angular
 .module( user, [ http ] )
-.config( route )
+.config( router )
 .controller( "userCtrl", userCtrl )
 .directive( "userProfile", profile )
 .directive( "userProfileSidebar", sbar )

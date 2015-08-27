@@ -1,0 +1,67 @@
+<div class="page-header attached-navbar">
+    <div class="container-fluid">
+        <h1>images</h1>
+        <div class="text-muted">images are docker core component</div>
+    </div>
+</div>
+
+<div class="container" ng-init="tab=1">
+    <div class="row">
+
+        <div class="col-xs-12 col-sm-9">
+            <div class="tab-content">
+                <div class="tab-pane" ng-class="{'active': tab===1}">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <p>no image found.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-pane" ng-class="{'active': tab===2}">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-4 col-md-3"
+                                    ng-repeat="item in ctrl.items">
+                                    <a class="thumbnail" href="#/images/1">
+                                        <img ng-src="{{item.i}}" alt="{{item.n}}">
+                                        <div class="caption text-center">{{item.n}}</div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-pane" ng-class="{'active': tab===3}">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <p>coming soon</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-3">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <ul class="nav nav-pills nav-stacked">
+                        <li ng-class="{'active': tab===1}">
+                            <a href ng-click="tab=1">private<span class="badge">0</span></a>
+                        </li>
+                        <li ng-class="{'active': tab===2}">
+                            <a href ng-click="tab=2">jodo images<span class="badge">6</span></a>
+                        </li>
+                        <li ng-class="{'active': tab===3}">
+                            <a href ng-click="tab=3">docker hub<span class="badge">1356</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <aside><p class="lead text-warning">fully raise  your docker experiences, try <a href><strong><u>jodolight</u></strong></a> out</p></aside>
+        </div>
+
+    </div>
+</div>

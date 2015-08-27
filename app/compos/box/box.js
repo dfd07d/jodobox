@@ -1,7 +1,7 @@
 define([
     "angular",
     "./../http/http",
-    "./route",
+    "./router",
     "./boot",
     "./ctrl/index",
     "./ctrl/show",
@@ -16,7 +16,7 @@ define([
     "./dir/clist",
     "./dir/citem",
     "./dir/set"
-], function( angular, http, route, boot, boxIndexCtrl, boxCtrl, newBoxCtrl,
+], function( angular, http, router, boot, iCtrl, sCtrl, nCtrl,
         boxIndex, boxList, boxItem, boxShow, activ, blist, bitem,
         clist, citem, set ) {
 
@@ -24,11 +24,11 @@ var box = "jodobox.box"
 
 angular
 .module( box, [ http ] )
-.config( route )
+.config( router )
 .run( boot )
-.controller( "boxIndexCtrl", boxIndexCtrl )
-.controller( "boxCtrl", boxCtrl )
-.controller( "newBoxCtrl", newBoxCtrl )
+.controller( "boxIndexCtrl", iCtrl )
+.controller( "boxCtrl", sCtrl )
+.controller( "newBoxCtrl", nCtrl )
 .directive( "boxIndex", boxIndex )
 .directive( "boxList", boxList )
 .directive( "boxItem", boxItem )

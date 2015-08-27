@@ -1,18 +1,18 @@
 define([
     "angular",
     "./../http/http",
-    "./route",
+    "./router",
     "./ctrl/signup",
     "./ctrl/signin",
     "./dir/signup",
     "./dir/signin"
-], function( angular, http, route, signupCtrl, signinCtrl, signupDir, signinDir ) {
+], function( angular, http, router, signupCtrl, signinCtrl, signupDir, signinDir ) {
 
 var regis = "jodobox.regis"
 
 angular
 .module( regis, [ http ] )
-.config( route )
+.config( router )
 .controller( "signupCtrl", signupCtrl )
 .controller( "signinCtrl", signinCtrl )
 .directive( "regisSignup", signupDir )
