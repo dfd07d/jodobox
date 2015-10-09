@@ -21,14 +21,12 @@ require([
 /___/
             */})
             .toString()
-            .match(/[^]*\/\*([^]*)\*\/\}$/)[1]
+            .match( /[^]*\/\*([^]*)\*\/\}$/ )[ 1 ]
 
             doc.ready(function () {
                 angular.bootstrap( document, [ app ] )
                 console.log( "%s \n hello world, jodobox was ready!", str )
             })
         })
-
     })
-
 })

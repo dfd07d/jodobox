@@ -1,5 +1,4 @@
 define([
-    "angular",
     "./core/core",
     "./ui/ui",
     "./nbar/nbar",
@@ -9,7 +8,7 @@ define([
     "./image/image",
     "./apl/apl",
     "./addon/addon"
-], function( angular, core, ui, nbar, box, image, apl, addon ) {
+], function( core, ui, nbar, box, image, apl, addon ) {
 
 var app = "jodobox.app"
 

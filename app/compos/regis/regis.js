@@ -1,12 +1,11 @@
 define([
-    "angular",
     "./../http/http",
     "./router",
     "./ctrl/signup",
     "./ctrl/signin",
     "./dir/signup",
     "./dir/signin"
-], function( angular, http, router, signupCtrl, signinCtrl, signupDir, signinDir ) {
+], function( http, router, signupCtrl, signinCtrl, signupDir, signinDir ) {
 
 var regis = "jodobox.regis"
 

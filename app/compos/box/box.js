@@ -1,5 +1,4 @@
 define([
-    "angular",
     "./../http/http",
     "./router",
     "./boot",
@@ -16,7 +15,7 @@ define([
     "./dir/clist",
     "./dir/citem",
     "./dir/set"
-], function( angular, http, router, boot, iCtrl, sCtrl, nCtrl,
+], function( http, router, boot, iCtrl, sCtrl, nCtrl,
         boxIndex, boxList, boxItem, boxShow, activ, blist, bitem,
         clist, citem, set ) {
 

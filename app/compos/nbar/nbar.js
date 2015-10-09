@@ -1,8 +1,7 @@
 define([
-    "angular",
     "./../quota/quota",
     "./dir/nbar"
-], function( angular, quota, navbar ) {
+], function( quota, navbar ) {
 
 var nbar = "jodobox.navbar"
 

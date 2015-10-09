@@ -1,7 +1,6 @@
 define([
-    "angular",
     "./serv/promise"
-], function( angular, promise ) {
+], function( promise ) {
 
 var http = "jodobox.http"
 

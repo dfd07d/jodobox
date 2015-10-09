@@ -1,5 +1,4 @@
 define([
-    "angular",
     "./../http/http",
     "./router",
     "./ctrl/show",
@@ -8,7 +7,7 @@ define([
     "./dir/info",
     "./dir/bio",
     "./dir/pwd"
-], function( angular, http, router, userCtrl, profile,
+], function( http, router, userCtrl, profile,
         sbar, info, bio, pwd ) {
 
 var user = "jodobox.user"

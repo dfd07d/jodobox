@@ -1,8 +1,7 @@
 define([
-    "angular",
     "./cong/tooltip",
     "./cong/moment"
-], function( angular, tooltip, moment ) {
+], function( tooltip, moment ) {
 
 var ui = "jodobox.ui"
 

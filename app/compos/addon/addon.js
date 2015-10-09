@@ -1,7 +1,6 @@
 define([
-    "angular",
     "./../http/http"
-], function( angular, http ) {
+], function( http ) {
 
 var addon = "jodobox.addon"
 

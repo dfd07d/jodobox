@@ -1,11 +1,10 @@
 define([
-    "angular",
     "./../http/http",
     "./router",
     "./ctrl/index",
     "./ctrl/show",
     "./ctrl/deploy"
-], function( angular, http, router, iCtrl, sCtrl, dCtrl ) {
+], function( http, router, iCtrl, sCtrl, dCtrl ) {
 
 var image = "jodobox.image"
 
